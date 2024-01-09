@@ -1,0 +1,85 @@
+.game-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.attempts {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.block {
+    display: grid;
+    grid-template-columns: repeat(6, 50px);
+    gap: 5px;
+}
+
+.block .gaming-sections {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.block .gaming-sections.clicked {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.main-btn {
+    background: rgba(0, 0, 0, 0.51);
+    padding: 8px 65px;
+    color: white;
+}
+
+.btn-two {
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative;
+}
+.btn-two span {
+    z-index: 2;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.btn-two::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.1);
+}
+.btn-two::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.1);
+}
+.btn-two:hover::before {
+    transform: rotate(-45deg);
+    background-color: rgba(255,255,255,0);
+}
+.btn-two:hover::after {
+    transform: rotate(45deg);
+    background-color: rgba(255,255,255,0);
+}

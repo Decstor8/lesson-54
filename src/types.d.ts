@@ -1,10 +1,10 @@
 
 export interface Type {
-    item: number;
+    hasItem: boolean;
     clicked: boolean;
 }
 
-interface PropsSections {
+export interface PropsSections {
     hasItem: boolean;
     clicked: boolean;
     onClick: () => void;
