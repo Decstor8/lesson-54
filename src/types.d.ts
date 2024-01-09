@@ -4,4 +4,10 @@ export interface Type {
     clicked: boolean;
 }
 
+interface PropsSections {
+    hasItem: boolean;
+    clicked: boolean;
+    onClick: () => void;
+}
+
 const array = [];
